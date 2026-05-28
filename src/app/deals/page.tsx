@@ -23,14 +23,14 @@ export default function DealsPage() {
         {deals.map((deal) => (
           <div
             key={deal.name}
-            className="rounded-xl p-5 flex items-center justify-between gap-4"
-            style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}
+            className="bg-white rounded-xl p-5 flex items-center justify-between gap-4 border hover:shadow-md transition"
+            style={{ borderColor: "var(--border)" }}
           >
             <div>
-              <h4 className="font-semibold">{deal.name}</h4>
+              <h4 className="font-semibold" style={{ color: "var(--text-primary)" }}>{deal.name}</h4>
               <div className="flex items-center gap-3 mt-1">
-                <span className="font-bold" style={{ color: "var(--green)" }}>{deal.price}</span>
-                <span className="text-xs px-2 py-0.5 rounded-full" style={{ background: "var(--bg-hover)", color: "var(--text-secondary)" }}>
+                <span className="font-bold text-green-600">{deal.price}</span>
+                <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100" style={{ color: "var(--text-secondary)" }}>
                   {deal.note}
                 </span>
               </div>
@@ -39,8 +39,7 @@ export default function DealsPage() {
               href={deal.url}
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="shrink-0 px-5 py-2.5 rounded-lg text-sm font-semibold hover:opacity-90 transition"
-              style={{ background: "var(--accent)", color: "white" }}
+              className="shrink-0 px-5 py-2.5 rounded-lg text-sm font-semibold bg-blue-600 text-white hover:bg-blue-700 transition"
             >
               Beli di Shopee →
             </a>

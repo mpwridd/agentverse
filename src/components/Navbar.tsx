@@ -13,8 +13,8 @@ const navLinks = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="sticky top-0 z-50 border-b" style={{ background: "var(--bg-secondary)", borderColor: "var(--border)" }}>
-      <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+    <nav className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur-md" style={{ borderColor: "var(--border)" }}>
+      <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold flex items-center gap-2" style={{ color: "var(--accent)" }}>
           <span className="text-2xl">🤖</span>
           <span>AgentVerse</span>
@@ -34,16 +34,8 @@ export default function Navbar() {
             <li key={l.href}>
               <Link
                 href={l.href}
-                className="px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+                className="px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-gray-100"
                 style={{ color: "var(--text-secondary)" }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = "var(--text-primary)";
-                  e.currentTarget.style.background = "var(--bg-hover)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = "var(--text-secondary)";
-                  e.currentTarget.style.background = "transparent";
-                }}
               >
                 {l.label}
               </Link>
@@ -52,12 +44,12 @@ export default function Navbar() {
         </ul>
       </div>
       {open && (
-        <ul className="md:hidden px-4 pb-4 space-y-1">
+        <ul className="md:hidden px-4 pb-4 space-y-1 bg-white border-t" style={{ borderColor: "var(--border)" }}>
           {navLinks.map((l) => (
             <li key={l.href}>
               <Link
                 href={l.href}
-                className="block px-3 py-2 rounded-lg text-sm"
+                className="block px-3 py-2 rounded-lg text-sm hover:bg-gray-50"
                 style={{ color: "var(--text-secondary)" }}
                 onClick={() => setOpen(false)}
               >
