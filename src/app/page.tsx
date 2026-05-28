@@ -49,14 +49,14 @@ export default function Home() {
         <div className="flex justify-center gap-3">
           <Link
             href="/reviews"
-            className="px-6 py-3 rounded-lg font-semibold transition-all"
+            className="px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition"
             style={{ background: "var(--accent)", color: "white" }}
           >
             Lihat Reviews →
           </Link>
           <Link
             href="/tutorials"
-            className="px-6 py-3 rounded-lg font-semibold transition-all"
+            className="px-6 py-3 rounded-lg font-semibold hover:opacity-80 transition"
             style={{ border: "1px solid var(--border)", color: "var(--text-primary)" }}
           >
             Mulai Tutorial
@@ -114,18 +114,10 @@ export default function Home() {
             <Link
               key={c.href}
               href={c.href}
-              className="rounded-xl p-5 text-center transition-all duration-200"
+              className="rounded-xl p-5 text-center hover:opacity-90 transition block"
               style={{
                 background: "var(--bg-card)",
                 border: "1px solid var(--border)",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "var(--accent)";
-                e.currentTarget.style.transform = "translateY(-2px)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "var(--border)";
-                e.currentTarget.style.transform = "translateY(0)";
               }}
             >
               <span className="text-3xl">{c.icon}</span>
@@ -149,7 +141,7 @@ export default function Home() {
         </p>
         <Link
           href="/reviews/mini-pc-ai-terbaik-2026"
-          className="inline-block px-6 py-3 rounded-lg font-semibold transition-all"
+          className="inline-block px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition"
           style={{ background: "var(--accent)", color: "white" }}
         >
           Lihat Rekomendasi Mini PC →

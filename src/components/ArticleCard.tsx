@@ -18,20 +18,10 @@ export default function ArticleCard({
 }: ArticleCardProps) {
   return (
     <article
-      className="rounded-xl p-6 transition-all duration-200 group"
+      className="rounded-xl p-6 transition-all duration-200 hover:-translate-y-0.5 group"
       style={{
         background: "var(--bg-card)",
         border: "1px solid var(--border)",
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = "var(--accent)";
-        e.currentTarget.style.transform = "translateY(-2px)";
-        e.currentTarget.style.boxShadow = "0 8px 30px rgba(108,140,255,0.1)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = "var(--border)";
-        e.currentTarget.style.transform = "translateY(0)";
-        e.currentTarget.style.boxShadow = "none";
       }}
     >
       <div className="flex items-center gap-2 text-xs mb-4">
@@ -45,7 +35,7 @@ export default function ArticleCard({
       </div>
       <Link href={`/reviews/${slug}`}>
         <h3
-          className="text-lg font-semibold mb-2 transition-colors"
+          className="text-lg font-semibold mb-2 group-hover:opacity-80 transition"
           style={{ color: "var(--text-primary)" }}
         >
           {title}
@@ -56,7 +46,7 @@ export default function ArticleCard({
       </p>
       <Link
         href={`/reviews/${slug}`}
-        className="inline-flex items-center gap-1 text-sm font-medium transition-opacity"
+        className="inline-flex items-center gap-1 text-sm font-medium hover:opacity-80 transition"
         style={{ color: "var(--accent)" }}
       >
         Baca selengkapnya
