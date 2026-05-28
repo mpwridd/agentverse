@@ -13,24 +13,37 @@ const navLinks = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
-      <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-cyan-400">
-          🤖 AgentVerse
+    <nav className="sticky top-0 z-50 border-b" style={{ background: "var(--bg-secondary)", borderColor: "var(--border)" }}>
+      <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+        <Link href="/" className="text-xl font-bold flex items-center gap-2" style={{ color: "var(--accent)" }}>
+          <span className="text-2xl">🤖</span>
+          <span>AgentVerse</span>
         </Link>
         <button
-          className="md:hidden text-gray-300"
+          className="md:hidden p-2 rounded-lg"
+          style={{ color: "var(--text-secondary)" }}
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
-          ☰
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M3 5h14M3 10h14M3 15h14" />
+          </svg>
         </button>
-        <ul className="hidden md:flex gap-6 text-sm">
+        <ul className="hidden md:flex gap-1">
           {navLinks.map((l) => (
             <li key={l.href}>
               <Link
                 href={l.href}
-                className="text-gray-300 hover:text-cyan-400 transition"
+                className="px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+                style={{ color: "var(--text-secondary)" }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = "var(--text-primary)";
+                  e.currentTarget.style.background = "var(--bg-hover)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = "var(--text-secondary)";
+                  e.currentTarget.style.background = "transparent";
+                }}
               >
                 {l.label}
               </Link>
@@ -39,12 +52,13 @@ export default function Navbar() {
         </ul>
       </div>
       {open && (
-        <ul className="md:hidden px-4 pb-4 space-y-2">
+        <ul className="md:hidden px-4 pb-4 space-y-1">
           {navLinks.map((l) => (
             <li key={l.href}>
               <Link
                 href={l.href}
-                className="block text-gray-300 hover:text-cyan-400 py-1"
+                className="block px-3 py-2 rounded-lg text-sm"
+                style={{ color: "var(--text-secondary)" }}
                 onClick={() => setOpen(false)}
               >
                 {l.label}

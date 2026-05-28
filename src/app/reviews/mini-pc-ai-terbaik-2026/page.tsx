@@ -5,14 +5,13 @@ import ProductLink from "@/components/ProductLink";
 export const metadata: Metadata = {
   title: "10 Mini PC Terbaik untuk AI Agent 2026",
   description:
-    "Rekomendasi Mini PC terbaik untuk menjalankan AI agent, local LLM, dan automation. Budget mulai 2 jutaan hingga flagship. Review lengkap dengan harga dan benchmark.",
+    "Rekomendasi Mini PC terbaik untuk menjalankan AI agent, local LLM, dan automation. Budget mulai 2 jutaan hingga flagship.",
   keywords: [
     "Mini PC AI",
     "Mini PC terbaik 2026",
     "local LLM",
     "AI agent hardware",
     "home lab",
-    "self-host AI",
   ],
   openGraph: {
     title: "10 Mini PC Terbaik untuk AI Agent 2026",
@@ -24,18 +23,19 @@ export const metadata: Metadata = {
 
 export default function MiniPCReview() {
   return (
-    <article className="prose prose-invert max-w-none">
-      <Link href="/reviews" className="text-cyan-400 text-sm no-underline">
+    <article className="prose-agent max-w-none">
+      <Link href="/reviews" className="text-sm mb-6 inline-flex items-center gap-1" style={{ color: "var(--accent)" }}>
         ← Kembali ke Reviews
       </Link>
 
-      <h1 className="text-3xl font-bold mt-4">
-        10 Mini PC Terbaik untuk AI Agent 2026
-      </h1>
+      <div className="flex items-center gap-3 text-xs mb-6">
+        <span className="px-3 py-1 rounded-full" style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
+          Review
+        </span>
+        <span style={{ color: "var(--text-secondary)" }}>Mei 2026 · 8 menit baca</span>
+      </div>
 
-      <p className="text-gray-400 text-sm">
-        Terakhir diperbarui: Mei 2026 · 8 menit baca
-      </p>
+      <h1>10 Mini PC Terbaik untuk AI Agent 2026</h1>
 
       <p>
         Mau jalankan AI agent di rumah tanpa langganan cloud? Mini PC adalah
@@ -45,8 +45,7 @@ export default function MiniPCReview() {
 
       <p>
         Di artikel ini, kami review 10 Mini PC terbaik yang bisa kamu pakai
-        untuk membangun home lab AI. Dari budget 2 jutaan hingga flagship
-        untuk inference berat.
+        untuk membangun home lab AI. Dari budget 2 jutaan hingga flagship.
       </p>
 
       <h2>Apa yang Dibutuhkan untuk AI Agent?</h2>
@@ -55,8 +54,7 @@ export default function MiniPCReview() {
 
       <ul>
         <li>
-          <strong>RAM 16GB</strong> — minimal untuk menjalankan model 7B
-          parameter
+          <strong>RAM 16GB</strong> — minimal untuk menjalankan model 7B parameter
         </li>
         <li>
           <strong>SSD NVMe 256GB+</strong> — untuk menyimpan model dan data
@@ -89,7 +87,7 @@ export default function MiniPCReview() {
         name="Beelink SEi10 i5 16/500GB"
         url="https://shopee.co.id/Beelink-SEi10-i.15438867.22681138325?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates"
         price="Rp 3.299.000"
-        note="Cocok untuk pemula AI agent"
+        note="Cocok untuk pemula"
       />
 
       <h2>2. Beelink SEi8 — Budget Champion</h2>
@@ -103,7 +101,7 @@ export default function MiniPCReview() {
         name="Beelink SEi8 i5 16/500GB"
         url="https://shopee.co.id/Beelink-SEi8-i.1070891797.20293439189?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates"
         price="Rp 2.799.000"
-        note="Budget terbaik untuk mulai"
+        note="Budget terbaik"
       />
 
       <h2>3. GEEKOM A9 Max — Flagship AI</h2>
@@ -117,7 +115,7 @@ export default function MiniPCReview() {
         name="GEEKOM A9 Max AI Mini PC"
         url="https://shopee.co.id/GEEKOM-A9-Max-i.1412305006.55103108854?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates"
         price="Rp 28.799.000"
-        note="Flagship untuk AI berat"
+        note="Flagship"
       />
 
       <h2>4. Raspberry Pi 5 — Ultra Low Power</h2>
@@ -139,49 +137,47 @@ export default function MiniPCReview() {
         name="Raspberry Pi 5 AI HAT+ 26 TOPS"
         url="https://shopee.co.id/Raspberry-Pi-5-AI-HAT-i.27499686.28674224294?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates"
         price="Rp 2.971.000"
-        note="Addon AI acceleration"
+        note="AI acceleration"
       />
 
       <h2>Perbandingan Singkat</h2>
 
-      <div className="overflow-x-auto">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="border-b border-gray-700">
-              <th className="text-left py-2">Mini PC</th>
-              <th className="text-left py-2">RAM</th>
-              <th className="text-left py-2">Harga</th>
-              <th className="text-left py-2">Best For</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="border-b border-gray-800">
-              <td>Beelink SEi8</td>
-              <td>16GB</td>
-              <td>2.7 Jt</td>
-              <td>Pemula</td>
-            </tr>
-            <tr className="border-b border-gray-800">
-              <td>Beelink SEi10</td>
-              <td>16GB</td>
-              <td>3.3 Jt</td>
-              <td>Best Value</td>
-            </tr>
-            <tr className="border-b border-gray-800">
-              <td>Raspberry Pi 5</td>
-              <td>8GB</td>
-              <td>4.2 Jt</td>
-              <td>Low Power</td>
-            </tr>
-            <tr className="border-b border-gray-800">
-              <td>GEEKOM A9 Max</td>
-              <td>32GB</td>
-              <td>28.8 Jt</td>
-              <td>Flagship</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Mini PC</th>
+            <th>RAM</th>
+            <th>Harga</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Beelink SEi8</td>
+            <td>16GB</td>
+            <td>2.7 Jt</td>
+            <td>Pemula</td>
+          </tr>
+          <tr>
+            <td>Beelink SEi10</td>
+            <td>16GB</td>
+            <td>3.3 Jt</td>
+            <td>Best Value</td>
+          </tr>
+          <tr>
+            <td>Raspberry Pi 5</td>
+            <td>8GB</td>
+            <td>4.2 Jt</td>
+            <td>Low Power</td>
+          </tr>
+          <tr>
+            <td>GEEKOM A9 Max</td>
+            <td>32GB</td>
+            <td>28.8 Jt</td>
+            <td>Flagship</td>
+          </tr>
+        </tbody>
+      </table>
 
       <h2>Verdict</h2>
 
@@ -200,24 +196,21 @@ export default function MiniPCReview() {
         performa maksimal.
       </p>
 
-      <div className="bg-gray-800 border border-gray-700 rounded-lg p-6 my-8">
-        <h3 className="text-lg font-semibold mb-2">
+      <div
+        className="rounded-xl p-6 my-8"
+        style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}
+      >
+        <h3 className="text-lg font-semibold mb-3" style={{ color: "var(--text-primary)" }}>
           🔗 Artikel Terkait
         </h3>
-        <ul className="space-y-2">
+        <ul className="space-y-2 list-none p-0">
           <li>
-            <Link
-              href="/comparisons/raspberry-pi-5-vs-mini-pc"
-              className="text-cyan-400 hover:underline"
-            >
+            <Link href="/comparisons/raspberry-pi-5-vs-mini-pc" style={{ color: "var(--accent)" }}>
               Raspberry Pi 5 vs Mini PC: Mana yang Lebih Worth?
             </Link>
           </li>
           <li>
-            <Link
-              href="/tutorials/setup-ai-agent-di-rumah"
-              className="text-cyan-400 hover:underline"
-            >
+            <Link href="/tutorials/setup-ai-agent-di-rumah" style={{ color: "var(--accent)" }}>
               Cara Setup AI Agent di Rumah (Step-by-Step)
             </Link>
           </li>

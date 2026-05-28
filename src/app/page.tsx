@@ -32,33 +32,66 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="text-center py-12">
-        <h1 className="text-4xl font-bold mb-4">
-          🤖 <span className="text-cyan-400">AgentVerse</span>
+      <section className="text-center py-16">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 text-sm" style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
+          <span className="w-2 h-2 rounded-full" style={{ background: "var(--green)" }}></span>
+          Panduan Lengkap AI Agent di Rumah
+        </div>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight" style={{ color: "var(--text-primary)" }}>
+          Bangun <span style={{ color: "var(--accent)" }}>AI Agent</span> di Rumah
+          <br />
+          Tanpa Langganan Cloud
         </h1>
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Review, tutorial, dan rekomendasi tools terbaik untuk membangun AI
-          agent di rumah. Mini PC, Raspberry Pi, kursus AI, dan automation.
+        <p className="text-lg max-w-2xl mx-auto mb-8" style={{ color: "var(--text-secondary)" }}>
+          Review Mini PC, Raspberry Pi, dan tools automation terbaik.
+          Setup sekali, jalan 24/7, hemat jutaan per bulan.
         </p>
-        <div className="flex justify-center gap-4 mt-6">
+        <div className="flex justify-center gap-3">
           <Link
             href="/reviews"
-            className="bg-cyan-500 text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 transition"
+            className="px-6 py-3 rounded-lg font-semibold transition-all"
+            style={{ background: "var(--accent)", color: "white" }}
           >
-            Lihat Reviews
+            Lihat Reviews →
           </Link>
           <Link
             href="/tutorials"
-            className="border border-gray-700 text-gray-300 px-6 py-2 rounded-lg hover:border-cyan-500 transition"
+            className="px-6 py-3 rounded-lg font-semibold transition-all"
+            style={{ border: "1px solid var(--border)", color: "var(--text-primary)" }}
           >
-            Tutorials
+            Mulai Tutorial
           </Link>
         </div>
       </section>
 
+      {/* Stats */}
+      <section className="grid grid-cols-3 gap-4 mb-16">
+        {[
+          { value: "10+", label: "Mini PC Reviewed" },
+          { value: "5+", label: "Tutorial Lengkap" },
+          { value: "24/7", label: "Automation Jalan" },
+        ].map((s) => (
+          <div
+            key={s.label}
+            className="text-center p-4 rounded-xl"
+            style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}
+          >
+            <div className="text-2xl font-bold mb-1" style={{ color: "var(--accent)" }}>{s.value}</div>
+            <div className="text-xs" style={{ color: "var(--text-secondary)" }}>{s.label}</div>
+          </div>
+        ))}
+      </section>
+
       {/* Latest Articles */}
-      <section className="mt-12">
-        <h2 className="text-2xl font-bold mb-6">📝 Artikel Terbaru</h2>
+      <section>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>
+            📝 Artikel Terbaru
+          </h2>
+          <Link href="/reviews" className="text-sm font-medium" style={{ color: "var(--accent)" }}>
+            Lihat semua →
+          </Link>
+        </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((a) => (
             <ArticleCard key={a.slug} {...a} />
@@ -68,24 +101,59 @@ export default function Home() {
 
       {/* Categories */}
       <section className="mt-16">
-        <h2 className="text-2xl font-bold mb-6">📂 Kategori</h2>
+        <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--text-primary)" }}>
+          📂 Kategori
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { name: "Reviews", href: "/reviews", icon: "⭐" },
-            { name: "Comparisons", href: "/comparisons", icon: "⚖️" },
-            { name: "Tutorials", href: "/tutorials", icon: "📚" },
-            { name: "Deals", href: "/deals", icon: "🔥" },
+            { name: "Reviews", href: "/reviews", icon: "⭐", desc: "Hardware & tools" },
+            { name: "Comparisons", href: "/comparisons", icon: "⚖️", desc: "Head-to-head" },
+            { name: "Tutorials", href: "/tutorials", icon: "📚", desc: "Step-by-step" },
+            { name: "Deals", href: "/deals", icon: "🔥", desc: "Harga terbaik" },
           ].map((c) => (
             <Link
               key={c.href}
               href={c.href}
-              className="bg-gray-900 border border-gray-800 rounded-lg p-4 text-center hover:border-cyan-500/50 transition"
+              className="rounded-xl p-5 text-center transition-all duration-200"
+              style={{
+                background: "var(--bg-card)",
+                border: "1px solid var(--border)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = "var(--accent)";
+                e.currentTarget.style.transform = "translateY(-2px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "var(--border)";
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
             >
-              <span className="text-2xl">{c.icon}</span>
-              <p className="text-sm mt-2 text-gray-300">{c.name}</p>
+              <span className="text-3xl">{c.icon}</span>
+              <p className="font-semibold mt-2" style={{ color: "var(--text-primary)" }}>{c.name}</p>
+              <p className="text-xs mt-1" style={{ color: "var(--text-secondary)" }}>{c.desc}</p>
             </Link>
           ))}
         </div>
+      </section>
+
+      {/* CTA */}
+      <section
+        className="mt-16 rounded-2xl p-8 text-center"
+        style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}
+      >
+        <h2 className="text-2xl font-bold mb-3" style={{ color: "var(--text-primary)" }}>
+          Siap Bangun AI Agent?
+        </h2>
+        <p className="mb-6" style={{ color: "var(--text-secondary)" }}>
+          Mulai dari Rp 2.7 juta. Setup 30 menit. Jalan 24/7 tanpa biaya bulanan.
+        </p>
+        <Link
+          href="/reviews/mini-pc-ai-terbaik-2026"
+          className="inline-block px-6 py-3 rounded-lg font-semibold transition-all"
+          style={{ background: "var(--accent)", color: "white" }}
+        >
+          Lihat Rekomendasi Mini PC →
+        </Link>
       </section>
     </div>
   );
