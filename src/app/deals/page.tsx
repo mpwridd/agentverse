@@ -3,16 +3,15 @@ import ProductLink from "@/components/ProductLink";
 export const metadata = {
   title: "Deals — Promo Mini PC & AI Tools",
   description:
-    "Deal terbaik Mini PC, Raspberry Pi, dan tools AI di Shopee. Update berkala.",
+    "Deal terbaik Mini PC, Raspberry Pi, dan tools AI di Shopee.",
 };
 
 export default function DealsPage() {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-2">🔥 Deals</h1>
-      <p className="text-gray-400 mb-8">
-        Deal terbaik untuk hardware AI agent. Link affiliate — harga sama
-        untuk Anda, kami dapat komisi kecil.
+      <p className="mb-8" style={{ color: "var(--text-secondary)" }}>
+        Deal terbaik untuk hardware AI agent.
       </p>
 
       <h2 className="text-xl font-semibold mb-4">Mini PC</h2>

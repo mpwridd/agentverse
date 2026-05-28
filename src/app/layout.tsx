@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     type: "website",
     locale: "id_ID",
     siteName: "AgentVerse",
-    images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
@@ -43,13 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col antialiased">
         <Navbar />
         <main className="flex-1 max-w-5xl mx-auto w-full px-4 py-8">
           {children}
