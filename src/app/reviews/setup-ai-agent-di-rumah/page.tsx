@@ -10,31 +10,31 @@ export const metadata: Metadata = {
 const products = [
   {
     name: "Lenovo ThinkCentre M910q i5 Gen 7 8GB/256GB",
-    price: "Rp 1.500.000",
+    price: "Rp 869.000",
     note: "Budget",
     url: "https://s.shopee.co.id/2BC5Je6aDR?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
   },
   {
     name: "Dell OptiPlex 3050 i5-6500T 8GB/256GB",
-    price: "Rp 1.800.000",
+    price: "Rp 650.000",
     note: "Value",
     url: "https://s.shopee.co.id/1gFok4DBKV?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
   },
   {
     name: "Beelink SEi8 i5-8279U 16/500GB",
-    price: "Rp 2.799.000",
+    price: "Rp 5.199.000",
     note: "Best Value",
     url: "https://s.shopee.co.id/4Va06EWqTK?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
   },
   {
     name: "LAN Cable Cat6",
-    price: "",
+    price: "Rp 14.900",
     note: "Aksesoris",
     url: "https://s.shopee.co.id/20sf7WWbrv?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
   },
   {
     name: "Keyboard ROBOT RK10",
-    price: "",
+    price: "Rp 98.000",
     note: "Aksesoris",
     url: "https://s.shopee.co.id/1VwOXoz07t?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
   },
@@ -356,10 +356,9 @@ export default function SetupAIAgent() {
         SSH ke VM Ubuntu, lalu install OpenClaw dan Hermes Agent:
       </p>
       <div
-        className="bg-gray-50 rounded-lg p-4 mb-4 font-mono text-sm overflow-x-auto"
-        style={{ color: "var(--text-primary)" }}
+        className="bg-gray-900 rounded-lg p-4 mb-4 font-mono text-sm overflow-x-auto"
       >
-        <code>
+        <code className="text-green-400">
           {"# Install OpenClaw (AI Agent framework)\n"}
           {"curl -fsSL https://openclaw.ai/install.sh | bash\n\n"}
           {"# Install Hermes Agent\n"}
@@ -424,10 +423,9 @@ export default function SetupAIAgent() {
         OpenAI. Langsung pakai:
       </p>
       <div
-        className="bg-gray-50 rounded-lg p-4 mb-4 font-mono text-sm overflow-x-auto"
-        style={{ color: "var(--text-primary)" }}
+        className="bg-gray-900 rounded-lg p-4 mb-4 font-mono text-sm overflow-x-auto"
       >
-        <code>
+        <code className="text-green-400">
           {"Base URL: https://token-plan-sgp.xiaomimimo.com/v1\n"}
           {"API Key: tp-stsslosuvgflh0osdfbden4oe9eus1yeadj76nlfslg8f811\n"}
         </code>
@@ -450,10 +448,9 @@ export default function SetupAIAgent() {
         Arsitektur Akhir
       </h2>
       <div
-        className="bg-gray-50 rounded-lg p-6 mb-6 font-mono text-sm"
-        style={{ color: "var(--text-primary)" }}
+        className="bg-gray-900 rounded-lg p-6 mb-6 font-mono text-sm"
       >
-        <code>
+        <code className="text-green-400">
           {"Mini PC (Proxmox Host)\n"}
           {"└── VM: Ubuntu Server 24.04\n"}
           {"    └── Hermes Agent\n"}
@@ -500,8 +497,8 @@ export default function SetupAIAgent() {
             <a
               href={p.url}
               target="_blank"
-              rel="noopener noreferrer nofollow"
-              className="shrink-0 px-5 py-2.5 rounded-lg text-sm font-semibold bg-blue-600 text-white hover:bg-blue-700 transition"
+              rel="noopener noreferrer"
+              className="shrink-0 px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition text-sm font-medium"
             >
               Beli →
             </a>
@@ -509,44 +506,21 @@ export default function SetupAIAgent() {
         ))}
       </div>
 
-      {/* Verdict */}
-      <h2
-        className="text-2xl font-bold mt-8 mb-4"
-        style={{ color: "var(--text-primary)" }}
+      {/* Disclaimer */}
+      <div
+        className="mt-10 p-4 rounded-lg border text-xs"
+        style={{
+          borderColor: "var(--border)",
+          color: "var(--text-secondary)",
+        }}
       >
-        Verdict
-      </h2>
-      <p className="mb-6" style={{ color: "var(--text-secondary)" }}>
-        Setup Proxmox + Hermes Agent ternyata gampang. Dengan Mini PC Rp 1.5
-        jutaan dan 30 menit waktu, lo sudah punya VPS pribadi yang bisa jalanin
-        AI Agent 24/7. Total biaya listrik hanya ~Rp 30-50 ribu per bulan. Jauh
-        lebih murah dari cloud VPS. Dan yang paling penting: semua data lo tetap
-        di rumah, bukan di server orang lain.
-      </p>
-
-      {/* Artikel Terkait */}
-      <div className="mt-8 bg-blue-50 rounded-xl p-6 border border-blue-100">
-        <h3 className="font-semibold mb-3 text-blue-800">
-          🔗 Artikel Terkait
-        </h3>
-        <ul className="space-y-2 list-none p-0">
-          <li>
-            <Link
-              href="/reviews/mini-pc-ai-terbaik-2026"
-              className="text-blue-600 hover:text-blue-700"
-            >
-              10 Mini PC Terbaik untuk Proxmox 2026
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/reviews/raspberry-pi-5-vs-mini-pc"
-              className="text-blue-600 hover:text-blue-700"
-            >
-              Mini PC vs VPS Cloud: Mana yang Lebih Worth?
-            </Link>
-          </li>
-        </ul>
+        <p>
+          <strong>Disclaimer:</strong> Harga terakhir diperbarui Mei 2026 dari
+          Shopee Indonesia. Harga dapat berubah sewaktu-waktu. Link di halaman
+          ini adalah link affiliate — kamu tidak dikenakan biaya tambahan, tapi
+          kami mendapat komisi kecil dari setiap pembelian. Terima kasih atas
+          dukungannya!
+        </p>
       </div>
     </article>
   );
