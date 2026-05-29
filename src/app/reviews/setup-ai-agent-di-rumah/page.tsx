@@ -28,6 +28,23 @@ export default function SetupAIAgent() {
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4" style={{ color: "var(--text-primary)" }}>
+        Video Tutorial
+      </h2>
+      <p className="mb-4" style={{ color: "var(--text-secondary)" }}>
+        Tonton video berikut untuk panduan visual install Proxmox + setup server dari nol:
+      </p>
+      <div className="mb-8 rounded-xl overflow-hidden border" style={{ borderColor: "var(--border)" }}>
+        <iframe
+          width="100%"
+          height="400"
+          src="https://www.youtube.com/embed/9KzI3GiZsrA"
+          title="Tutorial Install Proxmox di Mini PC"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4" style={{ color: "var(--text-primary)" }}>
         Yang Dibutuhkan
       </h2>
       <ul className="list-disc pl-6 mb-6 space-y-2" style={{ color: "var(--text-secondary)" }}>
