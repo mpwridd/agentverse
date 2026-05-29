@@ -1,105 +1,392 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+const title = "10 Mini PC Terbaik untuk Proxmox & AI Agent Server 2026";
+const description =
+  "Rekomendasi Mini PC terbaik untuk dijadikan server Proxmox. Jalankan AI Agent, VM, container, dan self-hosted services 24/7 di rumah.";
+
 export const metadata: Metadata = {
-  title: "10 Mini PC Terbaik untuk Proxmox & AI Agent Server 2026",
-  description: "Rekomendasi Mini PC terbaik untuk dijadikan server Proxmox. Jalankan AI Agent, VM, container, dan self-hosted services 24/7 di rumah.",
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    type: "article",
+  },
 };
 
 const products = [
-  { name: "Beelink SEi8 i5-8259U 16/500GB", price: "Rp 2.799.000", note: "Budget terbaik", spec: "Intel i5-8259U, 16GB DDR4, 500GB NVMe", url: "https://shopee.co.id/Beelink-SEi8-i.1070891797.20293439189?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates" },
-  { name: "Beelink SEi10 i5-1035G4 16/500GB", price: "Rp 3.299.000", note: "Best value", spec: "Intel i5-1035G4, 16GB DDR4, 500GB NVMe", url: "https://shopee.co.id/Beelink-SEi10-i.15438867.22681138325?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates" },
-  { name: "Raspberry Pi 5 8GB Paket", price: "Rp 4.200.000", note: "Low power server", spec: "ARM Cortex-A76, 8GB LPDDR4X, microSD+NVMe", url: "https://shopee.co.id/Raspberry-Pi-5-8GB-i.995354751.27455041254?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates" },
-  { name: "Raspberry Pi 5 AI HAT+", price: "Rp 2.971.000", note: "AI acceleration", spec: "ARM Cortex-A76 + AI HAT+ 13 TOPS", url: "https://shopee.co.id/Raspberry-Pi-5-AI-HAT-i.27499686.28674224294?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates" },
-  { name: "GEEKOM A9 Max AI Mini PC", price: "Rp 28.799.000", note: "Flagship", spec: "AMD Ryzen 9, 32GB DDR5, 1TB NVMe", url: "https://shopee.co.id/GEEKOM-A9-Max-i.1412305006.55103108854?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates" },
+  {
+    name: "Lenovo ThinkCentre M910q/M710q i5 Gen 7 8GB/256GB",
+    price: "Rp 1.500.000",
+    note: "Budget entry",
+    url: "https://s.shopee.co.id/2BC5Je6aDR?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
+  },
+  {
+    name: "Dell OptiPlex 3050 i5-6500T 8GB/256GB",
+    price: "Rp 1.800.000",
+    note: "Dell murah",
+    url: "https://s.shopee.co.id/1gFok4DBKV?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
+  },
+  {
+    name: "GMKtec G3 Plus Intel N150 16GB/512GB",
+    price: "Rp 2.500.000",
+    note: "Hemat listrik",
+    url: "https://s.shopee.co.id/6L1eHtSMBK?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
+  },
+  {
+    name: "Beelink SEi8 i5-8279U 16/500GB",
+    price: "Rp 2.799.000",
+    note: "Budget terbaik",
+    url: "https://s.shopee.co.id/4Va06EWqTK?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
+  },
+  {
+    name: "NUC Core i5 16GB/512GB",
+    price: "Rp 3.000.000",
+    note: "Kompak",
+    url: "https://s.shopee.co.id/LkR9aEfKX?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
+  },
+  {
+    name: "GMKtec NucBox G10 AMD Ryzen5 3500U",
+    price: "Rp 2.800.000",
+    note: "AMD murah",
+    url: "https://s.shopee.co.id/1LcyKjX6r4?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
+  },
+  {
+    name: "GEEKOM A5 AMD R7 5825U 32GB/1TB",
+    price: "Rp 5.500.000",
+    note: "Value flagship",
+    url: "https://s.shopee.co.id/2LVVWPkofH?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
+  },
+  {
+    name: "GEEKOM A6 AMD Ryzen 7 6800H 16GB DDR5/1TB",
+    price: "Rp 6.500.000",
+    note: "DDR5",
+    url: "https://s.shopee.co.id/7pqS4YkAuO?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
+  },
+  {
+    name: "Mac Mini M4 24GB/512GB",
+    price: "Rp 12.000.000",
+    note: "Apple ecosystem",
+    url: "https://s.shopee.co.id/1BJY9Fv8iu?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
+  },
+  {
+    name: "GEEKOM A9 Max 2026 AMD Ryzen9 HX 470 32GB DDR5/1TB",
+    price: "Rp 28.799.000",
+    note: "Flagship",
+    url: "https://s.shopee.co.id/809sGuV3pV?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
+  },
 ];
 
-export default function MiniPCReview() {
+const accessories = [
+  {
+    name: "LAN Cable Cat6",
+    price: "Rp 25.000",
+    note: "Wajib",
+    url: "https://s.shopee.co.id/20sf7WWbrv?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
+  },
+  {
+    name: "Keyboard ROBOT RK10",
+    price: "Rp 85.000",
+    note: "Setup awal",
+    url: "https://s.shopee.co.id/1VwOXoz07t?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
+  },
+  {
+    name: "Mac Mini A1347 2011/2012",
+    price: "Rp 600.000",
+    note: "Alternatif murah",
+    url: "https://s.shopee.co.id/20sf8uOTVC?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
+  },
+];
+
+const relatedArticles = [
+  {
+    title: "Cara Install Proxmox di Mini PC",
+    slug: "cara-install-proxmox-mini-pc",
+  },
+  {
+    title: "Setup AI Agent Lokal dengan Ollama",
+    slug: "setup-ai-agent-lokal-ollama",
+  },
+];
+
+export default function MiniPcAiTerbaikPage() {
   return (
-    <article className="max-w-none">
-      <Link href="/reviews" className="text-sm mb-6 inline-block text-blue-600 hover:text-blue-700">
-        ← Kembali ke Reviews
-      </Link>
+    <article className="max-w-3xl mx-auto px-4 py-12">
+      {/* Breadcrumb */}
+      <nav className="mb-6 text-sm" style={{ color: "var(--text-secondary)" }}>
+        <Link href="/" className="hover:underline">
+          Beranda
+        </Link>
+        <span className="mx-2">/</span>
+        <Link href="/reviews" className="hover:underline">
+          Reviews
+        </Link>
+        <span className="mx-2">/</span>
+        <span>Mini PC Terbaik 2026</span>
+      </nav>
 
-      <div className="flex items-center gap-3 text-xs mb-6">
-        <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-600 font-medium">Review</span>
-        <span style={{ color: "var(--text-secondary)" }}>Mei 2026 · 8 menit baca</span>
-      </div>
-
-      <h1 className="text-3xl font-bold mb-4" style={{ color: "var(--text-primary)" }}>
-        10 Mini PC Terbaik untuk Proxmox & AI Agent Server 2026
+      {/* Header */}
+      <h1
+        className="text-3xl md:text-4xl font-bold leading-tight mb-4"
+        style={{ color: "var(--text-primary)" }}
+      >
+        {title}
       </h1>
 
-      <p className="mb-6" style={{ color: "var(--text-secondary)" }}>
-        Mau bikin VPS pribadi di rumah? Mini PC + Proxmox adalah kombinasi terbaik.
-        Install Proxmox VE, bikin VM, jalankan AI Agent, Docker, dan self-hosted services
-        — semua di satu mesin kecil yang hemat listrik.
+      <p
+        className="text-lg mb-8 leading-relaxed"
+        style={{ color: "var(--text-secondary)" }}
+      >
+        {description}
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4" style={{ color: "var(--text-primary)" }}>
-        Kenapa Mini PC + Proxmox?
-      </h2>
-      <ul className="list-disc pl-6 mb-6 space-y-2" style={{ color: "var(--text-secondary)" }}>
-        <li><strong style={{ color: "var(--text-primary)" }}>VPS pribadi selamanya</strong> — bayar sekali, jalan terus. Tidak ada biaya bulanan.</li>
-        <li><strong style={{ color: "var(--text-primary)" }}>Multi-VM</strong> — satu Mini PC bisa jalanin beberapa VM sekaligus (AI Agent, Docker, NAS, dll).</li>
-        <li><strong style={{ color: "var(--text-primary)" }}>Hemat listrik</strong> — 15-65W vs 200W+ untuk server rack.</li>
-        <li><strong style={{ color: "var(--text-primary)" }}>Kompak</strong> — taruh di meja atau rak, tidak berisik.</li>
-      </ul>
+      {/* Intro */}
+      <section className="mb-10">
+        <p className="leading-relaxed mb-4" style={{ color: "var(--text-primary)" }}>
+          Mini PC + Proxmox adalah kombinasi terbaik untuk membangun home server yang
+          hemat listrik namun powerful. Dengan Proxmox VE, kamu bisa menjalankan
+          beberapa VM, LXC container, dan AI Agent sekaligus dalam satu perangkat
+          kecil yang nyaris tanpa suara. Tidak perlu rack server besar — cukup satu
+          Mini PC di meja atau di pojok ruangan, dan kamu sudah punya lab virtualisasi
+          sendiri di rumah.
+        </p>
+      </section>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4" style={{ color: "var(--text-primary)" }}>
-        Spesifikasi Minimum untuk Proxmox
-      </h2>
-      <ul className="list-disc pl-6 mb-6 space-y-2" style={{ color: "var(--text-secondary)" }}>
-        <li><strong style={{ color: "var(--text-primary)" }}>RAM 16GB</strong> — minimal. Proxmox + 1 VM butuh ~8GB. 32GB recommended.</li>
-        <li><strong style={{ color: "var(--text-primary)" }}>SSD NVMe 256GB+</strong> — untuk OS Proxmox + disk VM. 512GB lebih lega.</li>
-        <li><strong style={{ color: "var(--text-primary)" }}>CPU Intel Gen 8+ / AMD Ryzen</strong> — harus support VT-x/VT-d (Intel) atau AMD-V/IOMMU (AMD).</li>
-        <li><strong style={{ color: "var(--text-primary)" }}>2x LAN</strong> — idealnya. Satu untuk WAN, satu untuk LAN/management.</li>
-      </ul>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4" style={{ color: "var(--text-primary)" }}>
-        Rekomendasi Mini PC
-      </h2>
-
-      <div className="space-y-4">
-        {products.map((p) => (
-          <div key={p.name} className="bg-white rounded-xl p-5 border hover:shadow-md transition" style={{ borderColor: "var(--border)" }}>
-            <div className="flex items-center justify-between gap-4">
-              <div>
-                <h4 className="font-semibold" style={{ color: "var(--text-primary)" }}>{p.name}</h4>
-                <div className="flex items-center gap-3 mt-1">
-                  <span className="font-bold text-green-600">{p.price}</span>
-                  <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100" style={{ color: "var(--text-secondary)" }}>{p.note}</span>
-                </div>
-                <p className="text-xs mt-1" style={{ color: "var(--text-secondary)" }}>{p.spec}</p>
-              </div>
-              <a href={p.url} target="_blank" rel="noopener noreferrer nofollow" className="shrink-0 px-5 py-2.5 rounded-lg text-sm font-semibold bg-blue-600 text-white hover:bg-blue-700 transition">
-                Beli →
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4" style={{ color: "var(--text-primary)" }}>
-        Verdict
-      </h2>
-      <p className="mb-2" style={{ color: "var(--text-secondary)" }}>
-        <strong style={{ color: "var(--text-primary)" }}>Best Value:</strong> Beelink SEi10 — Rp 3.3 juta, i5 Gen 10, 16GB RAM. Cukup untuk Proxmox + 2-3 VM sekaligus.
-      </p>
-      <p className="mb-2" style={{ color: "var(--text-secondary)" }}>
-        <strong style={{ color: "var(--text-primary)" }}>Budget:</strong> Beelink SEi8 — Rp 2.8 juta, i5 Gen 8. Cocok untuk mulai belajar Proxmox.
-      </p>
-      <p className="mb-6" style={{ color: "var(--text-secondary)" }}>
-        <strong style={{ color: "var(--text-primary)" }}>Flagship:</strong> GEEKOM A9 Max — Rp 28.8 juta, Ryzen 9, 32GB DDR5. Untuk yang mau power maksimal.
-      </p>
-
-      <div className="mt-8 bg-blue-50 rounded-xl p-6 border border-blue-100">
-        <h3 className="font-semibold mb-3 text-blue-800">🔗 Artikel Terkait</h3>
-        <ul className="space-y-2 list-none p-0">
-          <li><Link href="/reviews/setup-ai-agent-di-rumah" className="text-blue-600 hover:text-blue-700">Cara Install Proxmox + Setup AI Agent</Link></li>
-          <li><Link href="/reviews/raspberry-pi-5-vs-mini-pc" className="text-blue-600 hover:text-blue-700">Mini PC vs VPS Cloud: Mana yang Lebih Worth?</Link></li>
+      {/* Kenapa Mini PC + Proxmox */}
+      <section className="mb-10">
+        <h2
+          className="text-2xl font-bold mb-4"
+          style={{ color: "var(--text-primary)" }}
+        >
+          Kenapa Mini PC + Proxmox?
+        </h2>
+        <ul className="space-y-3">
+          {[
+            "Hemat listrik — konsumsi daya 10-65W, jauh lebih rendah dari server rak biasa",
+            "Ukuran kecil dan tanpa kipas (fanless) atau nyaris sunyi, cocok untuk ruang kerja di rumah",
+            "Cukup powerful untuk menjalankan beberapa VM, Docker container, dan AI agent sekaligus",
+            "Biaya sangat terjangkau — mulai dari Rp 1,5 jutaan sudah bisa virtualisasi",
+            "Proxmox VE gratis (open source) dengan fitur enterprise-grade: snapshot, clustering, backup terjadwal",
+            "Skalabilitas mudah — tinggal tambah unit Mini PC dan join ke Proxmox cluster",
+          ].map((item, i) => (
+            <li key={i} className="flex gap-3">
+              <span className="text-green-600 font-bold mt-0.5">✓</span>
+              <span style={{ color: "var(--text-primary)" }}>{item}</span>
+            </li>
+          ))}
         </ul>
-      </div>
+      </section>
+
+      {/* Spesifikasi Minimum */}
+      <section className="mb-10">
+        <h2
+          className="text-2xl font-bold mb-4"
+          style={{ color: "var(--text-primary)" }}
+        >
+          Spesifikasi Minimum untuk Proxmox
+        </h2>
+        <div
+          className="rounded-xl p-5 border"
+          style={{
+            backgroundColor: "var(--surface, #f9fafb)",
+            borderColor: "var(--border)",
+          }}
+        >
+          <ul className="space-y-2">
+            {[
+              "RAM: 16GB minimum (32GB direkomendasikan untuk menjalankan banyak VM)",
+              "Storage: SSD NVMe 256GB+ (HDD terlalu lambat untuk virtualisasi)",
+              "CPU: Intel Gen 8 ke atas atau AMD Ryzen (pastikan support VT-x/VT-d atau AMD-V/IOMMU)",
+              "LAN: 2x port LAN sangat ideal — satu untuk management, satu untuk VM/bridge",
+              "Bonus: Intel N100/N150/Ryzen 7 untuk performa lebih baik dengan TDP rendah",
+            ].map((item, i) => (
+              <li key={i} className="flex gap-3">
+                <span
+                  className="shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-bold"
+                >
+                  {i + 1}
+                </span>
+                <span style={{ color: "var(--text-primary)" }}>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Rekomendasi Mini PC */}
+      <section className="mb-10">
+        <h2
+          className="text-2xl font-bold mb-2"
+          style={{ color: "var(--text-primary)" }}
+        >
+          Rekomendasi Mini PC Terbaik 2026
+        </h2>
+        <p className="mb-5 text-sm" style={{ color: "var(--text-secondary)" }}>
+          Harga dapat berubah sewaktu-waktu. Link di bawah adalah link afiliasi Shopee.
+        </p>
+        <div className="space-y-3">
+          {products.map((p) => (
+            <div
+              key={p.name}
+              className="bg-white rounded-xl p-5 border hover:shadow-md transition"
+              style={{ borderColor: "var(--border)" }}
+            >
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <h4
+                    className="font-semibold"
+                    style={{ color: "var(--text-primary)" }}
+                  >
+                    {p.name}
+                  </h4>
+                  <div className="flex items-center gap-3 mt-1">
+                    <span className="font-bold text-green-600">{p.price}</span>
+                    <span
+                      className="text-xs px-2 py-0.5 rounded-full bg-gray-100"
+                      style={{ color: "var(--text-secondary)" }}
+                    >
+                      {p.note}
+                    </span>
+                  </div>
+                </div>
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="shrink-0 px-5 py-2.5 rounded-lg text-sm font-semibold bg-blue-600 text-white hover:bg-blue-700 transition"
+                >
+                  Beli →
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Aksesoris Pendukung */}
+      <section className="mb-10">
+        <h2
+          className="text-2xl font-bold mb-4"
+          style={{ color: "var(--text-primary)" }}
+        >
+          Aksesoris Pendukung
+        </h2>
+        <p className="mb-4 text-sm" style={{ color: "var(--text-secondary)" }}>
+          Beberapa aksesoris yang perlu kamu siapkan saat membangun home server.
+        </p>
+        <div className="space-y-3">
+          {accessories.map((p) => (
+            <div
+              key={p.name}
+              className="bg-white rounded-xl p-5 border hover:shadow-md transition"
+              style={{ borderColor: "var(--border)" }}
+            >
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <h4
+                    className="font-semibold"
+                    style={{ color: "var(--text-primary)" }}
+                  >
+                    {p.name}
+                  </h4>
+                  <div className="flex items-center gap-3 mt-1">
+                    <span className="font-bold text-green-600">{p.price}</span>
+                    <span
+                      className="text-xs px-2 py-0.5 rounded-full bg-gray-100"
+                      style={{ color: "var(--text-secondary)" }}
+                    >
+                      {p.note}
+                    </span>
+                  </div>
+                </div>
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="shrink-0 px-5 py-2.5 rounded-lg text-sm font-semibold bg-blue-600 text-white hover:bg-blue-700 transition"
+                >
+                  Beli →
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Verdict */}
+      <section className="mb-10">
+        <h2
+          className="text-2xl font-bold mb-4"
+          style={{ color: "var(--text-primary)" }}
+        >
+          Verdict: Pilih Mana?
+        </h2>
+        <div
+          className="rounded-xl p-5 border space-y-3"
+          style={{
+            backgroundColor: "var(--surface, #f0fdf4)",
+            borderColor: "var(--border)",
+          }}
+        >
+          <p style={{ color: "var(--text-primary)" }}>
+            <strong>Budget ketat (di bawah Rp 2 juta):</strong> Lenovo ThinkCentre M910q
+            atau Dell OptiPlex 3050 — keduanya sudah cukup untuk Proxmox dasar dengan 1-2
+            VM ringan.
+          </p>
+          <p style={{ color: "var(--text-primary)" }}>
+            <strong>Best value (Rp 2-3 juta):</strong> Beelink SEi8 atau GMKtec G3 Plus.
+            SEi8 punya performa lebih baik, G3 Plus lebih hemat listrik dengan N150.
+          </p>
+          <p style={{ color: "var(--text-primary)" }}>
+            <strong>Serius virtualisasi (Rp 5-7 juta):</strong> GEEKOM A5 atau A6. RAM 32GB
+            dan storage besar, bisa jalankan banyak VM + AI agent sekaligus.
+          </p>
+          <p style={{ color: "var(--text-primary)" }}>
+            <strong>Apple ecosystem (Rp 12 juta):</strong> Mac Mini M4 sangat powerful dan
+            efisien, cocok kalau kamu sudah di ekosistem Apple.
+          </p>
+          <p style={{ color: "var(--text-primary)" }}>
+            <strong>No compromise (Rp 28 juta+):</strong> GEEKOM A9 Max — Ryzen 9 HX 470
+            dengan DDR5, ini workstation mini yang bisa gantikan server rak.
+          </p>
+        </div>
+      </section>
+
+      {/* Disclaimer */}
+      <p
+        className="text-xs mb-10 leading-relaxed"
+        style={{ color: "var(--text-secondary)" }}
+      >
+        Disclaimer: Artikel ini mengandung link afiliasi Shopee. Kami mendapat komisi
+        kecil jika kamu membeli melalui link tersebut, tanpa biaya tambahan untukmu.
+        Harga dapat berubah sewaktu-waktu sesuai kebijakan penjual.
+      </p>
+
+      {/* Related Articles */}
+      <section>
+        <h2
+          className="text-2xl font-bold mb-4"
+          style={{ color: "var(--text-primary)" }}
+        >
+          Artikel Terkait
+        </h2>
+        <div className="space-y-3">
+          {relatedArticles.map((article) => (
+            <Link
+              key={article.slug}
+              href={`/reviews/${article.slug}`}
+              className="block rounded-xl p-4 border hover:shadow-md transition"
+              style={{ borderColor: "var(--border)" }}
+            >
+              <span className="font-medium" style={{ color: "var(--text-primary)" }}>
+                {article.title}
+              </span>
+              <span className="ml-2 text-blue-600">→</span>
+            </Link>
+          ))}
+        </div>
+      </section>
     </article>
   );
 }
