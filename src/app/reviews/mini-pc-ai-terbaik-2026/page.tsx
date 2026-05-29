@@ -91,22 +91,16 @@ const accessories = [
     note: "Setup awal",
     url: "https://s.shopee.co.id/1VwOXoz07t?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
   },
-  {
-    name: "Mac Mini A1347 2011/2012",
-    price: "Rp 600.000",
-    note: "Alternatif murah",
-    url: "https://s.shopee.co.id/20sf8uOTVC?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
-  },
 ];
 
 const relatedArticles = [
   {
-    title: "Cara Install Proxmox di Mini PC",
-    slug: "cara-install-proxmox-mini-pc",
+    title: "Cara Install Proxmox + Setup AI Agent",
+    slug: "setup-ai-agent-di-rumah",
   },
   {
-    title: "Setup AI Agent Lokal dengan Ollama",
-    slug: "setup-ai-agent-lokal-ollama",
+    title: "Mini PC vs VPS Cloud",
+    slug: "raspberry-pi-5-vs-mini-pc",
   },
 ];
 
