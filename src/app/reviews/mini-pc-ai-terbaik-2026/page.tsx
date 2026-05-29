@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const title = "12 Mini PC Terbaik untuk Proxmox & AI Agent Server 2026";
+const title = "11 Mini PC Terbaik untuk Proxmox & AI Agent Server 2026";
 const description =
   "Rekomendasi Mini PC terbaik untuk dijadikan server Proxmox. Jalankan AI Agent, VM, container, dan self-hosted services 24/7 di rumah.";
 
@@ -139,7 +139,7 @@ export default function MiniPcAiTerbaikPage() {
         className="text-3xl font-bold mb-4"
         style={{ color: "var(--text-primary)" }}
       >
-        12 Mini PC Terbaik untuk Proxmox & AI Agent Server 2026
+        11 Mini PC Terbaik untuk Proxmox & AI Agent Server 2026
       </h1>
 
       <p className="mb-6" style={{ color: "var(--text-secondary)" }}>
