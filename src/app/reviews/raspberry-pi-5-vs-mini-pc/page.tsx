@@ -87,9 +87,11 @@ export default function RaspberryPiVsMiniPC() {
 
       <div className="space-y-4">
         {[
-          { name: "Beelink SEi8 i5 16/500GB", price: "Rp 2.799.000", note: "Budget terbaik", url: "https://shopee.co.id/Beelink-SEi8-i.1070891797.20293439189?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates" },
-          { name: "Beelink SEi10 i5 16/500GB", price: "Rp 3.299.000", note: "Best value", url: "https://shopee.co.id/Beelink-SEi10-i.15438867.22681138325?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates" },
-          { name: "Raspberry Pi 5 8GB Paket", price: "Rp 4.200.000", note: "Low power", url: "https://shopee.co.id/Raspberry-Pi-5-8GB-i.995354751.27455041254?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates" },
+          { name: "Lenovo ThinkCentre M910q i5 Gen 7 8GB/256GB", price: "Rp 1.500.000", note: "Budget entry", url: "https://s.shopee.co.id/2BC5Je6aDR" },
+          { name: "Dell OptiPlex 3050 i5-6500T 8GB/256GB", price: "Rp 1.800.000", note: "Dell murah", url: "https://s.shopee.co.id/1gFok4DBKV" },
+          { name: "Beelink SEi8 i5-8279U 16/500GB", price: "Rp 2.799.000", note: "Budget terbaik", url: "https://s.shopee.co.id/4Va06EWqTK" },
+          { name: "GEEKOM A5 AMD R7 5825U 32GB/1TB", price: "Rp 5.500.000", note: "Value flagship", url: "https://s.shopee.co.id/2LVVWPkofH" },
+          { name: "Mac Mini M4 24GB/512GB", price: "Rp 12.000.000", note: "Apple ecosystem", url: "https://s.shopee.co.id/1BJY9Fv8iu" },
         ].map((p) => (
           <div key={p.name} className="bg-white rounded-xl p-5 flex items-center justify-between gap-4 border hover:shadow-md transition" style={{ borderColor: "var(--border)" }}>
             <div>
