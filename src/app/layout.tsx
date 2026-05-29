@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "AgentVerse — Self-Hosted AI Server & Homelab",
+    default: "AgentVerse — AI Agent Server & Homelab",
     template: "%s | AgentVerse",
   },
   description:

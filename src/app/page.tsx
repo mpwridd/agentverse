@@ -35,7 +35,7 @@ export default function Home() {
           Self-Hosted AI Server di Rumah
         </div>
         <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight" style={{ color: "var(--text-primary)" }}>
-          Bangun <span className="text-blue-600">VPS Pribadi</span> di Rumah
+          Bangun <span className="text-blue-600">AI Agent Server</span> di Rumah
           <br />
           dengan Proxmox & Mini PC
         </h1>
