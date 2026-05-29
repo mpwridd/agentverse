@@ -350,37 +350,28 @@ export default function SetupAIAgent() {
         className="text-2xl font-bold mt-8 mb-4"
         style={{ color: "var(--text-primary)" }}
       >
-        Step 5: Install Hermes Agent di VM
+        Step 5: Install OpenClaw & Hermes Agent di VM
       </h2>
       <p className="mb-4" style={{ color: "var(--text-secondary)" }}>
-        SSH ke VM Ubuntu, lalu install Node.js 20 LTS dan Hermes Agent:
+        SSH ke VM Ubuntu, lalu install OpenClaw dan Hermes Agent:
       </p>
       <div
         className="bg-gray-50 rounded-lg p-4 mb-4 font-mono text-sm overflow-x-auto"
         style={{ color: "var(--text-primary)" }}
       >
         <code>
-          {"# Install Node.js 20 LTS\n"}
-          {"curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -\n"}
-          {"sudo apt install -y nodejs\n\n"}
+          {"# Install OpenClaw (AI Agent framework)\n"}
+          {"curl -fsSL https://openclaw.ai/install.sh | bash\n\n"}
           {"# Install Hermes Agent\n"}
-          {'curl -fsSL https://hermes.openclaw.com/install.sh | sh\n\n'}
+          {"curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash\n\n"}
           {"# Konfigurasi API Key (lihat Step 6)\n"}
           {"hermes configure\n"}
         </code>
       </div>
       <p className="mb-6" style={{ color: "var(--text-secondary)" }}>
-        Alternatif, kamu juga bisa install{" "}
-        <a
-          href="https://openclaw.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:text-blue-700"
-        >
-          OpenClaw
-        </a>{" "}
-        sebagai framework AI agent lainnya. Konfigurasi dengan API key dari
-        provider yang kamu pilih (lihat Step 6 di bawah).
+        Pilih salah satu atau install keduanya. OpenClaw dan Hermes Agent
+        adalah framework AI agent yang bisa jalan di mana saja. Konfigurasi
+        dengan API key dari provider yang kamu pilih (lihat Step 6 di bawah).
       </p>
 
       {/* Step 6 */}

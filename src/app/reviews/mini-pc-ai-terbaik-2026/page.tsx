@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const title = "10 Mini PC Terbaik untuk Proxmox & AI Agent Server 2026";
+const title = "12 Mini PC Terbaik untuk Proxmox & AI Agent Server 2026";
 const description =
   "Rekomendasi Mini PC terbaik untuk dijadikan server Proxmox. Jalankan AI Agent, VM, container, dan self-hosted services 24/7 di rumah.";
 
@@ -21,6 +21,12 @@ const products = [
     price: "Rp 1.500.000",
     note: "Budget entry",
     url: "https://s.shopee.co.id/2BC5Je6aDR?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
+  },
+  {
+    name: "Lenovo ThinkCentre M720Q i5 Gen 8 8GB/256GB",
+    price: "Rp 1.800.000",
+    note: "Lenovo populer",
+    url: "https://s.shopee.co.id/LkRFjJlpD?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
   },
   {
     name: "Dell OptiPlex 3050 i5-6500T 8GB/256GB",
@@ -90,6 +96,12 @@ const accessories = [
     price: "Rp 85.000",
     note: "Setup awal",
     url: "https://s.shopee.co.id/1VwOXoz07t?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
+  },
+  {
+    name: "Mouse + Keyboard Wireless Combo",
+    price: "Rp 150.000",
+    note: "Praktis",
+    url: "https://s.shopee.co.id/9zuwlk2YL0?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates",
   },
 ];
 
