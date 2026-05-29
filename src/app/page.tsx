@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const articles = [
   {
-    title: "10 Mini PC Terbaik untuk Proxmox & AI Agent Server 2026",
+    title: "11 Mini PC Terbaik untuk Proxmox & AI Agent Server 2026",
     excerpt: "Rekomendasi Mini PC terbaik untuk dijadikan server Proxmox. Jalankan AI Agent, VM, container, dan self-hosted services 24/7.",
     slug: "mini-pc-ai-terbaik-2026",
     category: "Review",
@@ -63,7 +63,7 @@ export default function Home() {
       {/* Stats */}
       <section className="grid grid-cols-3 gap-4 mb-16">
         {[
-          { value: "10+", label: "Mini PC Reviewed", color: "bg-blue-50 text-blue-600" },
+          { value: "11", label: "Mini PC Reviewed", color: "bg-blue-50 text-blue-600" },
           { value: "30", label: "Menit Setup", color: "bg-green-50 text-green-600" },
           { value: "24/7", label: "Server Jalan", color: "bg-orange-50 text-orange-600" },
         ].map((s) => (
@@ -127,7 +127,7 @@ export default function Home() {
           Siap Bangun Server Sendiri?
         </h2>
         <p className="mb-6 text-blue-100">
-          Mulai dari Rp 2.7 juta. Install Proxmox 30 menit. Punya VPS pribadi selamanya.
+          Mulai dari Rp 650 ribu. Install Proxmox 30 menit. Punya VPS pribadi selamanya.
         </p>
         <Link
           href="/reviews/mini-pc-ai-terbaik-2026"
