@@ -3,24 +3,24 @@ import Link from "next/link";
 
 const articles = [
   {
-    title: "10 Mini PC Terbaik untuk AI Agent 2026",
-    excerpt: "Rekomendasi Mini PC terbaik untuk menjalankan AI agent, local LLM, dan automation. Budget mulai 2 jutaan hingga flagship.",
+    title: "10 Mini PC Terbaik untuk Proxmox & AI Agent Server 2026",
+    excerpt: "Rekomendasi Mini PC terbaik untuk dijadikan server Proxmox. Jalankan AI Agent, VM, container, dan self-hosted services 24/7.",
     slug: "mini-pc-ai-terbaik-2026",
     category: "Review",
     date: "Mei 2026",
   },
   {
-    title: "Raspberry Pi 5 vs Mini PC: Mana yang Lebih Worth?",
-    excerpt: "Perbandingan lengkap Raspberry Pi 5 dan Mini PC untuk home lab AI. Dari harga, performa, hingga use case terbaik.",
-    slug: "raspberry-pi-5-vs-mini-pc",
-    category: "Comparison",
+    title: "Cara Install Proxmox di Mini PC + Setup AI Agent",
+    excerpt: "Panduan lengkap dari nol: install Proxmox VE, bikin VM, jalankan Ollama + AI Agent di dalam VM. Selesai dalam 30 menit.",
+    slug: "setup-ai-agent-di-rumah",
+    category: "Tutorial",
     date: "Mei 2026",
   },
   {
-    title: "Cara Setup AI Agent di Rumah (Step-by-Step)",
-    excerpt: "Panduan lengkap setup AI agent dari nol. Install Ollama, n8n, dan jalankan automation 24/7 tanpa langganan cloud.",
-    slug: "setup-ai-agent-di-rumah",
-    category: "Tutorial",
+    title: "Mini PC vs VPS Cloud: Mana yang Lebih Worth?",
+    excerpt: "Perbandingan Mini PC self-hosted vs VPS cloud (AWS, GCP, DigitalOcean). Dari biaya, performa, sampai fleksibilitas.",
+    slug: "raspberry-pi-5-vs-mini-pc",
+    category: "Comparison",
     date: "Mei 2026",
   },
 ];
@@ -32,23 +32,23 @@ export default function Home() {
       <section className="text-center py-16">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 text-sm bg-blue-50 text-blue-600">
           <span className="w-2 h-2 rounded-full bg-green-500"></span>
-          Panduan Lengkap AI Agent di Rumah
+          Self-Hosted AI Server di Rumah
         </div>
         <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight" style={{ color: "var(--text-primary)" }}>
-          Bangun <span className="text-blue-600">AI Agent</span> di Rumah
+          Bangun <span className="text-blue-600">VPS Pribadi</span> di Rumah
           <br />
-          Tanpa Langganan Cloud
+          dengan Proxmox & Mini PC
         </h1>
         <p className="text-lg max-w-2xl mx-auto mb-8" style={{ color: "var(--text-secondary)" }}>
-          Review Mini PC, Raspberry Pi, dan tools automation terbaik.
-          Setup sekali, jalan 24/7, hemat jutaan per bulan.
+          Jalankan AI Agent, VM, dan self-hosted services di Mini PC sendiri.
+          Sekali setup, jalan 24/7. Hemat jutaan per bulan vs cloud VPS.
         </p>
         <div className="flex justify-center gap-3">
           <Link
             href="/reviews"
             className="px-6 py-3 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition"
           >
-            Lihat Reviews →
+            Lihat Rekomendasi →
           </Link>
           <Link
             href="/tutorials"
@@ -64,8 +64,8 @@ export default function Home() {
       <section className="grid grid-cols-3 gap-4 mb-16">
         {[
           { value: "10+", label: "Mini PC Reviewed", color: "bg-blue-50 text-blue-600" },
-          { value: "5+", label: "Tutorial Lengkap", color: "bg-green-50 text-green-600" },
-          { value: "24/7", label: "Automation Jalan", color: "bg-orange-50 text-orange-600" },
+          { value: "30", label: "Menit Setup", color: "bg-green-50 text-green-600" },
+          { value: "24/7", label: "Server Jalan", color: "bg-orange-50 text-orange-600" },
         ].map((s) => (
           <div
             key={s.label}
@@ -124,10 +124,10 @@ export default function Home() {
       {/* CTA */}
       <section className="mt-16 rounded-2xl p-8 text-center bg-gradient-to-br from-blue-600 to-blue-700 text-white">
         <h2 className="text-2xl font-bold mb-3">
-          Siap Bangun AI Agent?
+          Siap Bangun Server Sendiri?
         </h2>
         <p className="mb-6 text-blue-100">
-          Mulai dari Rp 2.7 juta. Setup 30 menit. Jalan 24/7 tanpa biaya bulanan.
+          Mulai dari Rp 2.7 juta. Install Proxmox 30 menit. Punya VPS pribadi selamanya.
         </p>
         <Link
           href="/reviews/mini-pc-ai-terbaik-2026"

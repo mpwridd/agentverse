@@ -5,20 +5,22 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "AgentVerse — AI Agent Tools, Reviews & Tutorials",
+    default: "AgentVerse — Self-Hosted AI Server & Homelab",
     template: "%s | AgentVerse",
   },
   description:
-    "Review Mini PC, Raspberry Pi, kursus AI, dan tools automation terbaik. Panduan lengkap setup AI Agent di rumah.",
+    "Panduan lengkap bikin VPS pribadi di rumah dengan Mini PC + Proxmox. Jalankan AI Agent, VM, Docker, dan self-hosted services 24/7.",
   keywords: [
-    "AI Agent",
+    "Proxmox",
     "Mini PC",
-    "Raspberry Pi",
-    "n8n",
-    "automation",
+    "AI Agent",
+    "homelab",
     "self-host",
-    "local LLM",
-    "home lab",
+    "VPS",
+    "Ollama",
+    "n8n",
+    "Docker",
+    "CasaOS",
   ],
   authors: [{ name: "AgentVerse" }],
   openGraph: {

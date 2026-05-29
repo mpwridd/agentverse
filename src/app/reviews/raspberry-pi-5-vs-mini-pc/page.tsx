@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Raspberry Pi 5 vs Mini PC: Mana yang Lebih Worth?",
-  description: "Perbandingan lengkap Raspberry Pi 5 dan Mini PC untuk home lab AI. Dari harga, performa, hingga use case terbaik.",
+  title: "Mini PC vs VPS Cloud: Mana yang Lebih Worth?",
+  description: "Perbandingan Mini PC self-hosted vs VPS cloud (AWS, GCP, DigitalOcean). Dari biaya, performa, sampai fleksibilitas.",
 };
 
 export default function RaspberryPiVsMiniPC() {
@@ -19,16 +19,16 @@ export default function RaspberryPiVsMiniPC() {
       </div>
 
       <h1 className="text-3xl font-bold mb-4" style={{ color: "var(--text-primary)" }}>
-        Raspberry Pi 5 vs Mini PC: Mana yang Lebih Worth?
+        Mini PC vs VPS Cloud: Mana yang Lebih Worth?
       </h1>
 
       <p className="mb-6" style={{ color: "var(--text-secondary)" }}>
-        Dua pilihan terbaik untuk home lab AI. Mana yang lebih cocok untuk kebutuhanmu?
-        Mari bandingkan dari segi harga, performa, konsumsi listrik, dan use case.
+        Mau jalanin AI Agent 24/7? Dua pilihan: beli Mini PC sendiri atau sewa VPS cloud.
+        Mana yang lebih murah dan worth it dalam jangka panjang?
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4" style={{ color: "var(--text-primary)" }}>
-        Spesifikasi Head-to-Head
+        Perbandingan Biaya
       </h2>
 
       <div className="overflow-x-auto mb-8">
@@ -36,51 +36,60 @@ export default function RaspberryPiVsMiniPC() {
           <thead>
             <tr className="bg-gray-50">
               <th className="text-left p-3 border font-semibold" style={{ borderColor: "var(--border)", color: "var(--text-primary)" }}>Aspek</th>
-              <th className="text-left p-3 border font-semibold" style={{ borderColor: "var(--border)", color: "var(--text-primary)" }}>Raspberry Pi 5</th>
-              <th className="text-left p-3 border font-semibold" style={{ borderColor: "var(--border)", color: "var(--text-primary)" }}>Mini PC</th>
+              <th className="text-left p-3 border font-semibold" style={{ borderColor: "var(--border)", color: "var(--text-primary)" }}>Mini PC Self-Hosted</th>
+              <th className="text-left p-3 border font-semibold" style={{ borderColor: "var(--border)", color: "var(--text-primary)" }}>VPS Cloud</th>
             </tr>
           </thead>
           <tbody style={{ color: "var(--text-secondary)" }}>
-            <tr><td className="p-3 border font-medium" style={{ borderColor: "var(--border)" }}>Harga</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>Rp 1.2 - 4.2 juta (paket)</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>Rp 2.7 - 28 juta</td></tr>
-            <tr><td className="p-3 border font-medium" style={{ borderColor: "var(--border)" }}>CPU</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>ARM Cortex-A76 (4 core)</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>Intel i5/i7 atau AMD Ryzen</td></tr>
-            <tr><td className="p-3 border font-medium" style={{ borderColor: "var(--border)" }}>RAM Maks</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>8GB LPDDR4X</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>64GB+ DDR4/DDR5</td></tr>
-            <tr><td className="p-3 border font-medium" style={{ borderColor: "var(--border)" }}>Konsumsi Listrik</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>5-12W</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>15-65W</td></tr>
-            <tr><td className="p-3 border font-medium" style={{ borderColor: "var(--border)" }}>Storage</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>microSD + NVMe (dengan HAT)</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>NVMe SSD bawaan</td></tr>
-            <tr><td className="p-3 border font-medium" style={{ borderColor: "var(--border)" }}>GPU/AI</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>AI HAT+ (opsional)</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>Integrated GPU, lebih powerful</td></tr>
+            <tr><td className="p-3 border font-medium" style={{ borderColor: "var(--border)" }}>Biaya Awal</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>Rp 2.8 - 3.3 juta (sekali)</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>Rp 0</td></tr>
+            <tr><td className="p-3 border font-medium" style={{ borderColor: "var(--border)" }}>Biaya Bulanan</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>Rp 30-50rb (listrik)</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>Rp 200rb - 1.5jt/bulan</td></tr>
+            <tr><td className="p-3 border font-medium" style={{ borderColor: "var(--border)" }}>Biaya 1 Tahun</td><td className="p-3 border font-bold text-green-600" style={{ borderColor: "var(--border)" }}>Rp 3.4 - 3.9 juta</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>Rp 2.4 - 18 juta</td></tr>
+            <tr><td className="p-3 border font-medium" style={{ borderColor: "var(--border)" }}>Biaya 3 Tahun</td><td className="p-3 border font-bold text-green-600" style={{ borderColor: "var(--border)" }}>Rp 3.9 - 4.8 juta</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>Rp 7.2 - 54 juta</td></tr>
+            <tr><td className="p-3 border font-medium" style={{ borderColor: "var(--border)" }}>RAM</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>16-32GB (sekali bayar)</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>1-8GB (tergantung plan)</td></tr>
+            <tr><td className="p-3 border font-medium" style={{ borderColor: "var(--border)" }}>Storage</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>500GB+ NVMe</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>20-80GB</td></tr>
+            <tr><td className="p-3 border font-medium" style={{ borderColor: "var(--border)" }}>Internet</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>Tergantung ISP rumah</td><td className="p-3 border" style={{ borderColor: "var(--border)" }}>Gigabit datacenter</td></tr>
           </tbody>
         </table>
       </div>
 
       <h2 className="text-2xl font-bold mt-8 mb-4" style={{ color: "var(--text-primary)" }}>
-        Kapan Pilih Raspberry Pi 5?
-      </h2>
-      <ul className="list-disc pl-6 mb-6 space-y-2" style={{ color: "var(--text-secondary)" }}>
-        <li><strong style={{ color: "var(--text-primary)" }}>Budget ketat</strong> — mulai Rp 1.2 juta untuk board saja</li>
-        <li><strong style={{ color: "var(--text-primary)" }}>Konsumsi listrik minimal</strong> — 5W idle, cocok jalan 24/7</li>
-        <li><strong style={{ color: "var(--text-primary)" }}>Project IoT/sensor</strong> — GPIO pins untuk hardware hacking</li>
-        <li><strong style={{ color: "var(--text-primary)" }}>Belajar Linux</strong> — platform terbaik untuk eksplorasi</li>
-      </ul>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4" style={{ color: "var(--text-primary)" }}>
         Kapan Pilih Mini PC?
       </h2>
       <ul className="list-disc pl-6 mb-6 space-y-2" style={{ color: "var(--text-secondary)" }}>
-        <li><strong style={{ color: "var(--text-primary)" }}>Jalankan LLM 7B+</strong> — butuh RAM 16GB+ dan CPU x86</li>
-        <li><strong style={{ color: "var(--text-primary)" }}>Docker heavy</strong> — banyak container sekaligus</li>
-        <li><strong style={{ color: "var(--text-primary)" }}>Media server</strong> — transcoding butuh GPU</li>
-        <li><strong style={{ color: "var(--text-primary)" }}>Performa maksimal</strong> — tidak ada kompromi</li>
+        <li><strong style={{ color: "var(--text-primary)" }}>Jangka panjang</strong> — break point di bulan ke-6. Setelah itu lebih murah.</li>
+        <li><strong style={{ color: "var(--text-primary)" }}>Butuh RAM/storage besar</strong> — 16GB RAM + 500GB NVMe cuma Rp 3.3 juta.</li>
+        <li><strong style={{ color: "var(--text-primary)" }}>Mau full kontrol</strong> — hardware di tangan, tidak tergantung provider.</li>
+        <li><strong style={{ color: "var(--text-primary)" }}>Privacy</strong> — data di rumah, tidak di server orang lain.</li>
       </ul>
 
       <h2 className="text-2xl font-bold mt-8 mb-4" style={{ color: "var(--text-primary)" }}>
-        Rekomendasi
+        Kapan Pilih VPS Cloud?
+      </h2>
+      <ul className="list-disc pl-6 mb-6 space-y-2" style={{ color: "var(--text-secondary)" }}>
+        <li><strong style={{ color: "var(--text-primary)" }}>Butuh uptime 99.9%</strong> — datacenter punya UPS + backup internet.</li>
+        <li><strong style={{ color: "var(--text-primary)" }}>IP public statik</strong> — mudah untuk hosting website/API.</li>
+        <li><strong style={{ color: "var(--text-primary)" }}>Scalability</strong> — naikkan specs kapan saja.</li>
+        <li><strong style={{ color: "var(--text-primary)" }}>Short-term project</strong> — sewa per bulan, selesai stop.</li>
+      </ul>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4" style={{ color: "var(--text-primary)" }}>
+        Best of Both Worlds
+      </h2>
+      <p className="mb-6" style={{ color: "var(--text-secondary)" }}>
+        Pakai Mini PC untuk workload berat (AI Agent, Docker, NAS) yang butuh RAM/storage besar.
+        Pakai VPS murah (Rp 50-100rb/bulan) sebagai reverse proxy + endpoint public.
+        Kombinasi keduanya = performa maksimal + akses dari mana saja.
+      </p>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4" style={{ color: "var(--text-primary)" }}>
+        Rekomendasi Mini PC
       </h2>
 
       <div className="space-y-4">
         {[
-          { name: "Raspberry Pi 5 8GB Paket", price: "Rp 4.200.000", note: "Paket siap pakai", url: "https://shopee.co.id/Raspberry-Pi-5-8GB-i.995354751.27455041254?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates" },
-          { name: "Raspberry Pi 5 AI HAT+", price: "Rp 2.971.000", note: "AI acceleration", url: "https://shopee.co.id/Raspberry-Pi-5-AI-HAT-i.27499686.28674224294?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates" },
-          { name: "Beelink SEi8 i5 16/500GB", price: "Rp 2.799.000", note: "Mini PC budget", url: "https://shopee.co.id/Beelink-SEi8-i.1070891797.20293439189?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates" },
-          { name: "Beelink SEi10 i5 16/500GB", price: "Rp 3.299.000", note: "Best value Mini PC", url: "https://shopee.co.id/Beelink-SEi10-i.15438867.22681138325?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates" },
+          { name: "Beelink SEi8 i5 16/500GB", price: "Rp 2.799.000", note: "Budget terbaik", url: "https://shopee.co.id/Beelink-SEi8-i.1070891797.20293439189?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates" },
+          { name: "Beelink SEi10 i5 16/500GB", price: "Rp 3.299.000", note: "Best value", url: "https://shopee.co.id/Beelink-SEi10-i.15438867.22681138325?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates" },
+          { name: "Raspberry Pi 5 8GB Paket", price: "Rp 4.200.000", note: "Low power", url: "https://shopee.co.id/Raspberry-Pi-5-8GB-i.995354751.27455041254?mmp_pid=an_11360871961&utm_source=an_11360871961&utm_medium=affiliates" },
         ].map((p) => (
           <div key={p.name} className="bg-white rounded-xl p-5 flex items-center justify-between gap-4 border hover:shadow-md transition" style={{ borderColor: "var(--border)" }}>
             <div>
@@ -101,17 +110,17 @@ export default function RaspberryPiVsMiniPC() {
         Verdict
       </h2>
       <p className="mb-2" style={{ color: "var(--text-secondary)" }}>
-        <strong style={{ color: "var(--text-primary)" }}>Pilih Raspberry Pi 5</strong> kalau budget terbatas, butuh hemat listrik, atau mau belajar hardware.
+        <strong style={{ color: "var(--text-primary)" }}>Kalau butuh jangka panjang:</strong> Mini PC menang telak. Investasi Rp 3.3 juta, hemat Rp 500rb+/bulan vs cloud VPS.
       </p>
       <p className="mb-6" style={{ color: "var(--text-secondary)" }}>
-        <strong style={{ color: "var(--text-primary)" }}>Pilih Mini PC</strong> kalau butuh performa untuk LLM, Docker, atau media server. Worth the extra cost.
+        <strong style={{ color: "var(--text-primary)" }}>Kalau butuh fleksibilitas:</strong> VPS cloud tetap oke untuk project pendek atau butuh IP public statik.
       </p>
 
       <div className="mt-8 bg-blue-50 rounded-xl p-6 border border-blue-100">
         <h3 className="font-semibold mb-3 text-blue-800">🔗 Artikel Terkait</h3>
         <ul className="space-y-2 list-none p-0">
-          <li><Link href="/reviews/mini-pc-ai-terbaik-2026" className="text-blue-600 hover:text-blue-700">10 Mini PC Terbaik untuk AI Agent 2026</Link></li>
-          <li><Link href="/reviews/setup-ai-agent-di-rumah" className="text-blue-600 hover:text-blue-700">Cara Setup AI Agent di Rumah</Link></li>
+          <li><Link href="/reviews/mini-pc-ai-terbaik-2026" className="text-blue-600 hover:text-blue-700">10 Mini PC Terbaik untuk Proxmox 2026</Link></li>
+          <li><Link href="/reviews/setup-ai-agent-di-rumah" className="text-blue-600 hover:text-blue-700">Cara Install Proxmox + Setup AI Agent</Link></li>
         </ul>
       </div>
     </article>
