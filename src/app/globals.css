@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #f8f6f3;
+  --bg-primary: #ebe8e3;
   --bg-secondary: #ffffff;
   --bg-card: #ffffff;
-  --bg-hover: #f0ede8;
-  --border: #e8e4de;
+  --bg-hover: #e0ddd7;
+  --border: #d8d4cd;
   --text-primary: #1a1612;
-  --text-secondary: #6b6560;
+  --text-secondary: #5a5550;
   --accent: #2563eb;
   --accent-soft: #2563eb10;
   --green: #16a34a;
@@ -22,7 +22,6 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Smooth scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -34,13 +33,11 @@ body {
   border-radius: 3px;
 }
 
-/* Selection color */
 ::selection {
   background: var(--accent);
   color: white;
 }
 
-/* Line clamp utility */
 .line-clamp-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
